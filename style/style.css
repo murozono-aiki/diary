@@ -1,0 +1,197 @@
+html {
+    font-family: "Noto Sans JP", "メイリオ", Meiryo, "Meiryo UI", sans-serif;
+    color: #333333;
+}
+body {
+    margin-bottom: 20vh;
+}
+input, textarea, button {
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+}
+
+.right {
+    text-align: right;
+}
+
+#saving {
+    position: fixed;
+    bottom: 3vh;
+    left: 3vw;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    background-color: #f5f54778;
+}
+
+#filterForm {
+    display: inline-block;
+}
+#search {
+    border: none;
+    border-bottom: 1px solid #aaaaaa;
+    margin-bottom: 8px;
+    max-width: 60vw;
+    width: 20rem;
+}
+#formSubmit {
+    color: white;
+    background-color: #58aabe;
+    border: none;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+#formSubmit:hover {
+    background-color: #6abace;
+}
+
+#detailSearchFold {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 10px;
+    border: 1px solid #aaaaaa;
+    border-radius: 3px;
+    padding: 3px 5px;
+    font-size: 0.9rem;
+}
+#detailSearchFold:not([open]) ~ #detailSearch {
+    display: none;
+}
+
+#editButton {
+    position: fixed;
+    bottom: max(5vh, 30px);
+    right: max(5vw, 30px);
+    color: white;
+    background-color: #58aabe;
+    border: none;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    letter-spacing: 0;
+}
+#editButton:hover {
+    background-color: #6abace;
+}
+
+#main, #main_past {
+    margin-top: 2rem;
+}
+
+.heading {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+.oneDiary {
+    color: #202020;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 10px;
+    border: none;
+    text-align: justify;
+    margin-bottom: 1.8rem;
+    white-space: pre-wrap;
+    cursor: pointer;
+    min-width: calc(100% - 20px);
+}
+.diary_dateElement {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+.diary_titleElement {
+    font-size: 1.05rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.1rem;
+    margin-left: 1.2rem;
+}
+.diary_textElement {
+    margin-left: 2.4rem;
+}
+.highlight {
+    background-color: #ffff70;
+}
+
+#editHeader {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.1rem;
+}
+#editDate {
+    white-space: nowrap;
+    min-width: 10rem;
+    text-align: center;
+}
+#editLastDay, #editNextDay {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.title {
+    width: 100%;
+    border: none;
+    margin-bottom: 5px;
+}
+.content {
+    width: 100%;
+    border: none;
+    resize: none;
+}
+#closeEditor {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-top: 3px;
+    padding-bottom: 10px;
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-bottom: 10px;
+}
+#add_content {
+    background: none;
+    border: 2px solid #58aabe;
+    border-radius: 6px;
+    margin-left: 2vw;
+    cursor: pointer;
+}
+#add_content:hover {
+    background-color: #efefef;
+}
+#set_contents {
+    background: none;
+    border: 2px solid #e9e949;
+    border-radius: 6px;
+    margin-right: 5vw;
+    cursor: pointer;
+}
+#set_contents:disabled {
+    background-color: #ededed;
+    color: #666666;
+    border-color: #d0d059;
+    cursor: default;
+}
+#set_contents:hover {
+    background-color: #efefef;
+}
+
+#add_content {
+    display: none;
+}
+#set_contents {
+    display: none;
+}
+
+dialog {
+    border-radius: 7px;
+    min-width: 40vw;
+}
+.form-submit {
+    text-align: right;
+}

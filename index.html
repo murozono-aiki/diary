@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日記</title>
+    <link rel="icon" href="./icons/diary48.png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div id="saving">保存中</div>
+    <div id="main-area">
+        <form id="filterForm">
+            <input type="search" id="search" placeholder="語句を入力">
+            <button type="submit" id="formSubmit">検索</button>
+        </form>
+        <details id="detailSearchFold">
+            <summary>詳細検索</summary>
+        </details>
+        <div id="detailSearch">
+        </div>
+
+        <button id="editButton">＋</button>
+
+        <div id="main">
+        </div>
+    </div>
+    <div id="edit-area">
+        <button id="closeEditor">× 閉じる</button>
+        <div id="editHeader">
+            <button id="editLastDay">＜</button>
+            <span id="editDate"></span>
+            <button id="editNextDay">＞</button>
+        </div>
+        <div id="contents_area">
+        </div>
+        <button id="add_content">見出しを追加</button>
+        <div class="right">
+            <button id="set_contents">保存</button>
+        </div>
+    </div>
+    <dialog id="firstDialog">
+        <form method="dialog" id="firstForm">
+            <label for="URL-input">URLを入力してください。</label><br>
+            <input type="url" id="URL-input">
+            <div class="form-submit">
+                <button type="submit">決定</button>
+            </div>
+        </form>
+    </dialog>
+    <script src="script/script.js"></script>
+</body>
+</html>

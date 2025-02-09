@@ -221,7 +221,7 @@ function resetDiary(data = diaryData) {
 let initFunction;
 if (diaryData) {
     resetDiary();
-    initFunction = (async () => {
+    /*initFunction = (async () => {
         const postURL = new URL(url);
         postURL.searchParams.set("method", "POST");
         const responce = await fetch(postURL, {method: "POST", body: JSON.stringify(diaryData)});
@@ -229,8 +229,8 @@ if (diaryData) {
         diaryData = data;
         localStorage.setItem("diary-data", JSON.stringify(diaryData.slice(-400)));
         if (diaryData) requestAnimationFrame(() => {resetDiary();});
-    });
-} else {
+    });*/
+}/* else {*/
     initFunction = (async () => {
         const getURL = new URL(url);
         getURL.searchParams.set("method", "GET");
@@ -240,7 +240,7 @@ if (diaryData) {
         localStorage.setItem("diary-data", JSON.stringify(diaryData.slice(-400)));
         if (diaryData) requestAnimationFrame(() => {resetDiary();});
     });
-}
+/*}*/
 function requestURL() {
     document.getElementById("firstForm").addEventListener("submit", event => {
         url = document.getElementById("URL-input").value;
@@ -256,7 +256,11 @@ function requestURL() {
 document.getElementById("firstDialog").addEventListener("close", event => {
     if (!url || !URL.canParse(url)) requestURL();
 });
-if (!url || !URL.canParse(url)) requestURL();
+if (url && URL.canParse(url)) {
+    initFunction();
+} else {
+    requestURL();
+}
 
 // ----------
 // 日記の検索

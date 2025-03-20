@@ -1,6 +1,7 @@
 html {
     font-family: "Noto Sans JP", "メイリオ", Meiryo, "Meiryo UI", sans-serif;
     color: #333333;
+    line-height: 1.5;
 }
 body {
     margin-bottom: 20vh;
@@ -9,6 +10,7 @@ input, textarea, button {
     font-family: inherit;
     color: inherit;
     font-size: inherit;
+    line-height: inherit;
 }
 
 .right {
@@ -113,6 +115,10 @@ input, textarea, button {
 }
 .diary_textElement {
     margin-left: 2.4rem;
+    text-indent: 1rem;
+}
+.diary_textElement p {
+    margin: 0;
 }
 .highlight {
     background-color: #ffff70;

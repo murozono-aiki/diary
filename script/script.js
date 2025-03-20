@@ -49,7 +49,7 @@ function createDiaryElement(oneDayData, highlightText) {
         for (let i = 0; i < lineList.length; i++) {
             const line = lineList[i];
             if (i != 0) element.appendChild(document.createElement('br'));
-            element.appendChild(document.createTextNode(text));
+            element.appendChild(document.createTextNode(line));
         }
         return element;
     }
@@ -93,8 +93,11 @@ function createDiaryElement(oneDayData, highlightText) {
             const lineList = spanText[i].split("\n");
             for (let j = 0; j < lineList.length; j++) {
                 const line = lineList[j];
-                if (j != 0) textElement.appendChild(document.createElement('br'));
-                textElement.appendChild(document.createTextNode(line));
+                const paragraphElement = document.createElement('p');
+                //if (j != 0) textElement.appendChild(document.createElement('br'));
+                textElement.appendChild(paragraphElement);
+                //textElement.appendChild(document.createTextNode(line));
+                paragraphElement.appendChild(document.createTextNode(line));
             }
         }
     }

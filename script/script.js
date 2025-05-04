@@ -482,6 +482,10 @@ function save() {
                     }
                 }
                 if (!existSameTitle) editData.contents.push(contentObject);
+            } else {
+                if (!contentObject.text) {
+                    is_edited = false;
+                }
             }
             if (is_edited) object.contents.push(contentObject);
         }
